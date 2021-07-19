@@ -619,7 +619,7 @@ body {
 
 .footer-form-input:focus {
   outline: none;
-  border: 1px solid var(--accent-color);
+  /* border: 1px solid var(--accent-color); */
 }
 
 .footer-form-btn {
@@ -637,7 +637,8 @@ body {
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  padding: 10px 29px;
+  padding-left: 29px;
+  border: none;
   background-image: url(../images/icon/SVG/icon-send.svg);
   background-repeat: no-repeat;
   background-position: right 13px center;
@@ -648,6 +649,7 @@ body {
 
 .footer-form-btn:hover,
 .footer-form-btn:focus {
+  outline: none;
   background-color: var(--btn-hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -772,6 +774,8 @@ body {
   transform: translateY(0%);
 }
 
+/*---backdrop---*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -815,6 +819,12 @@ body {
   top: 8px;
   right: 8px;
   padding: 0;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:focus,
+.modal-close-btn:hover {
+  fill: var(--accent-color);
 }
 
 .is-hidden {
@@ -905,7 +915,7 @@ body {
 }
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-image: url(../images/icon/SVG/icon-check-fon.svg);
+  background-image: url(../images/icon/SVG/icon-check-v.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-origin: border-box;
@@ -953,6 +963,7 @@ body {
 }
 
 .modal-form-button {
+  display: block;
   font-family: inherit;
   font-weight: bold;
   font-size: 16px;
@@ -961,10 +972,11 @@ body {
   color: var(--dark-theme-text-color);
   padding-top: 10px;
   padding: 10px 55px;
-  margin: auto;
+  margin: 0 auto;
 
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
   cursor: pointer;
 
